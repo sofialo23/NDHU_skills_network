@@ -43,7 +43,7 @@
 							else 
 							header("location: user.php"); in case we want different interfaces for some users */ 
 						
-	
+	//Prueba de GitHUB
 			  
 		   }
 		   
