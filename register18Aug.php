@@ -138,27 +138,67 @@
             <tr>
               <td>
                 <select id="Sun_select1" >
-                    <option value='0' name'drpMenuTime' id="drpMenuTime" >--</option>
-                   <option value='6:00' name='drpMenuTime' id='drpMenuTime'>6:00</option><option value='7:00' name='drpMenuTime' id='drpMenuTime'>7:00</option><option value='8:00' name='drpMenuTime' id='drpMenuTime'>8:00</option><option value='9:00' name='drpMenuTime' id='drpMenuTime'>9:00</option><option value='10:00' name='drpMenuTime' id='drpMenuTime'>10:00</option><option value='11:00' name='drpMenuTime' id='drpMenuTime'>11:00</option><option value='12:00' name='drpMenuTime' id='drpMenuTime'>12:00</option><option value='13:00' name='drpMenuTime' id='drpMenuTime'>13:00</option><option value='14:00' name='drpMenuTime' id='drpMenuTime'>14:00</option><option value='15:00' name='drpMenuTime' id='drpMenuTime'>15:00</option><option value='16:00' name='drpMenuTime' id='drpMenuTime'>16:00</option><option value='17:00' name='drpMenuTime' id='drpMenuTime'>17:00</option><option value='18:00' name='drpMenuTime' id='drpMenuTime'>18:00</option><option value='19:00' name='drpMenuTime' id='drpMenuTime'>19:00</option>
-                   <option value='20:00' name='drpMenuTime' id='drpMenuTime'>20:00</option><option value='21:00' name='drpMenuTime' id='drpMenuTime'>21:00</option><option value='22:00' name='drpMenuTime' id='drpMenuTime'>22:00</option><option value='23:00' name='drpMenuTime' id='drpMenuTime'>23:00</option>
+                	<option value='0' name='drpMenuTime' id="drpMenuTime" >--</option>
+                   	<option value='6:00' name='drpMenuTime' id='drpMenuTime'>6:00</option>
+                   	<option value='7:00' name='drpMenuTime' id='drpMenuTime'>7:00</option>
+                   	<option value='8:00' name='drpMenuTime' id='drpMenuTime'>8:00</option>
+                   	<option value='9:00' name='drpMenuTime' id='drpMenuTime'>9:00</option>
+                   	<option value='10:00' name='drpMenuTime' id='drpMenuTime'>10:00</option>
+                   	<option value='11:00' name='drpMenuTime' id='drpMenuTime'>11:00</option>
+                   	<option value='12:00' name='drpMenuTime' id='drpMenuTime'>12:00</option>
+                   	<option value='13:00' name='drpMenuTime' id='drpMenuTime'>13:00</option>
+                   	<option value='14:00' name='drpMenuTime' id='drpMenuTime'>14:00</option>
+                   	<option value='15:00' name='drpMenuTime' id='drpMenuTime'>15:00</option>
+                   	<option value='16:00' name='drpMenuTime' id='drpMenuTime'>16:00</option>
+                   	<option value='17:00' name='drpMenuTime' id='drpMenuTime'>17:00</option>
+                   	<option value='18:00' name='drpMenuTime' id='drpMenuTime'>18:00</option>
+                   	<option value='19:00' name='drpMenuTime' id='drpMenuTime'>19:00</option>
+                   	<option value='20:00' name='drpMenuTime' id='drpMenuTime'>20:00</option>
+                   	<option value='21:00' name='drpMenuTime' id='drpMenuTime'>21:00</option>
+                   	<option value='22:00' name='drpMenuTime' id='drpMenuTime'>22:00</option>
+                   	<option value='23:00' name='drpMenuTime' id='drpMenuTime'>23:00</option>
                 </select> 
                 <select id="Sun_select2" >
-                      <option value='0' name'drpMenuDrtn' id="drpMenuTime" >--</option>
-                     <option value='1:00' name='drpMenuDrtn' id='drpMenuDrtn'>1:00 hr</option><option value='1:30' name='drpMenuDrtn' id='drpMenuDrtn'>1:30 hr</option><option value='2:00' name='drpMencuDrtn.' id='drpMenuDrtn'>2:00 hr</option><option value='2:30' name='drpMenuDrtn' id='drpMenuDrtn'>2:30 hr</option><option value='3:00' name='drpMenuDrtn' id='drpMenuDrtn'>3:00 hr</option><option value='3:30' name='drpMenuDrtn' id='drpMenuDrtn'>3:30 hr</option><option value='4:00' name='drpMenuDrtn' id='drpMenuDrtn'>4:00 hr</option><option value='4:30' name='drpMenuDrtn' id='drpMenuDrtn'>4:30 hr</option><option value='5:00' name='drpMenuDrtn' id='drpMenuDrtn'>5:00 hr</option><option value='5:30' name='drpMenuDrtn' id='drpMenuDrtn'>5:30 hr</option>
-                     <option value='6:00' name='drpMenuDrtn' id='drpMenuDrtn'>6:00 hr</option>
+                	<option value='0' name='drpMenuDrtn' id="drpMenuTime" >--</option>
+                    <option value='1:00' name='drpMenuDrtn' id='drpMenuDrtn'>1:00 hr</option>
+                    <option value='1:30' name='drpMenuDrtn' id='drpMenuDrtn'>1:30 hr</option>
+                    <option value='2:00' name='drpMencuDrtn.' id='drpMenuDrtn'>2:00 hr</option>
+                    <option value='2:30' name='drpMenuDrtn' id='drpMenuDrtn'>2:30 hr</option>
+                    <option value='3:00' name='drpMenuDrtn' id='drpMenuDrtn'>3:00 hr</option>
+                    <option value='3:30' name='drpMenuDrtn' id='drpMenuDrtn'>3:30 hr</option>
+                    <option value='4:00' name='drpMenuDrtn' id='drpMenuDrtn'>4:00 hr</option>
+                    <option value='4:30' name='drpMenuDrtn' id='drpMenuDrtn'>4:30 hr</option>
+                    <option value='5:00' name='drpMenuDrtn' id='drpMenuDrtn'>5:00 hr</option>
+                    <option value='5:30' name='drpMenuDrtn' id='drpMenuDrtn'>5:30 hr</option>
+                    <option value='6:00' name='drpMenuDrtn' id='drpMenuDrtn'>6:00 hr</option>
                 </select>
               </td>
             </tr>
             <tr>
               <td>
                   <select id="Sun_select3"  >
-                     <option value='0' name'drpMenuTwoTime' id="drpMenuTime" >--</option>
-                     <option value='6:00' name='drpMenuTwoTime' id='drpMenuTwoTime'>6:00</option><option value='7:00' name='drpMenuTwoTime' id='drpMenuTwoTime'>7:00</option><option value='8:00' name='drpMenuTwoTime' id='drpMenuTwoTime'>8:00</option><option value='9:00' name='drpMenuTwoTime' id='drpMenuTwoTime'>9:00</option><option value='10:00' name='drpMenuTwoTime' id='drpMenuTwoTime'>10:00</option><option value='11:00' name='drpMenuTwoTime' id='drpMenuTwoTime'>11:00</option><option value='12:00' name='drpMenuTwoTime' id='drpMenuTwoTime'>12:00</option><option value='13:00' name='drpMenuTwoTime' id='drpMenuTwoTime'>13:00</option>
-                     <option value='14:00' name='drpMenuTwoTime' id='drpMenuTwoTime'>14:00</option><option value='15:00' name='drpMenuTwoTime' id='drpMenuTwoTime'>15:00</option><option value='16:00' name='drpMenuTwoTime' id='drpMenuTwoTime'>16:00</option><option value='17:00' name='drpMenuTwoTime' id='drpMenuTwoTime'>17:00</option><option value='18:00' name='drpMenuTwoTime' id='drpMenuTwoTime'>18:00</option><option value='19:00' name='drpMenuTwoTime' id='drpMenuTwoTime'>19:00</option><option value='20:00' name='drpMenuTwoTime' id='drpMenuTwoTime'>20:00</option><option value='21:00' name='drpMenuTwoTime' id='drpMenuTwoTime'>21:00</option>
-                     <option value='22:00' name='drpMenuTwoTime' id='drpMenuTwoTime'>22:00</option><option value='23:00' name='drpMenuTwoTime' id='drpMenuTwoTime'>23:00</option>
+                     <option value='0' name='drpMenuTwoTime' id="drpMenuTime" >--</option>
+                     <option value='6:00' name='drpMenuTwoTime' id='drpMenuTwoTime'>6:00</option>
+                     <option value='7:00' name='drpMenuTwoTime' id='drpMenuTwoTime'>7:00</option>
+                     <option value='8:00' name='drpMenuTwoTime' id='drpMenuTwoTime'>8:00</option>
+                     <option value='9:00' name='drpMenuTwoTime' id='drpMenuTwoTime'>9:00</option>
+                     <option value='10:00' name='drpMenuTwoTime' id='drpMenuTwoTime'>10:00</option>
+                     <option value='11:00' name='drpMenuTwoTime' id='drpMenuTwoTime'>11:00</option>
+                     <option value='12:00' name='drpMenuTwoTime' id='drpMenuTwoTime'>12:00</option>
+                     <option value='13:00' name='drpMenuTwoTime' id='drpMenuTwoTime'>13:00</option>
+                     <option value='14:00' name='drpMenuTwoTime' id='drpMenuTwoTime'>14:00</option>
+                     <option value='15:00' name='drpMenuTwoTime' id='drpMenuTwoTime'>15:00</option>
+                     <option value='16:00' name='drpMenuTwoTime' id='drpMenuTwoTime'>16:00</option>
+                     <option value='17:00' name='drpMenuTwoTime' id='drpMenuTwoTime'>17:00</option>
+                     <option value='18:00' name='drpMenuTwoTime' id='drpMenuTwoTime'>18:00</option>
+                     <option value='19:00' name='drpMenuTwoTime' id='drpMenuTwoTime'>19:00</option>
+                     <option value='20:00' name='drpMenuTwoTime' id='drpMenuTwoTime'>20:00</option>
+                     <option value='21:00' name='drpMenuTwoTime' id='drpMenuTwoTime'>21:00</option>
+                     <option value='22:00' name='drpMenuTwoTime' id='drpMenuTwoTime'>22:00</option>
+                     <option value='23:00' name='drpMenuTwoTime' id='drpMenuTwoTime'>23:00</option>
                   </select>
                   <select id="Sun_select4" >
-                     <option value='0' name'drpMenuTwoDrtn' id="drpMenuTwoDrtn" >--</option><!-- <option value='0' name'drpMenuTwoDrtn' id="drpMenuTwoDrtn" >----</option>-->
+                     <option value='0' name='drpMenuTwoDrtn' id="drpMenuTwoDrtn" >--</option><!-- <option value='0' name'drpMenuTwoDrtn' id="drpMenuTwoDrtn" >----</option>-->
                       <option value='1:00' name='drpMenuTwoDrtn' id='drpMenuTwoDrtn'>1:00 hr</option><option value='1:30' name='drpMenuTwoDrtn' id='drpMenuTwoDrtn'>1:30 hr</option><option value='2:00' name='drpMenuTwoDrtn' id='drpMenuTwoDrtn'>2:00 hr</option><option value='2:30' name='drpMenuTwoDrtn' id='drpMenuTwoDrtn'>2:30 hr</option><option value='3:00' name='drpMenuTwoDrtn' id='drpMenuTwoDrtn'>3:00 hr</option><option value='3:30' name='drpMenuTwoDrtn' id='drpMenuTwoDrtn'>3:30 hr</option><option value='4:00' name='drpMenuTwoDrtn' id='drpMenuTwoDrtn'>4:00 hr</option><option value='4:30' name='drpMenuTwoDrtn' id='drpMenuTwoDrtn'>4:30 hr</option><option value='5:00' name='drpMenuTwoDrtn' id='drpMenuTwoDrtn'>5:00 hr</option><option value='5:30' name='drpMenuTwoDrtn' id='drpMenuTwoDrtn'>5:30 hr</option><option value='6:00' name='drpMenuTwoDrtn' id='drpMenuTwoDrtn'>6:00 hr</option>
                   </select>
               </td>
@@ -170,12 +210,12 @@
             <tr>
               <td>
                 <select id="Mon_select1" name="mondaY_select1" >
-                   <option value='0' name'drpMenuTime' id="drpMenuTime" >--</option>
+                   <option value='0' name='drpMenuTime' id="drpMenuTime" >--</option>
                    <option value='6:00' name='drpMenuTime' id='drpMenuTime'>6:00</option><option value='7:00' name='drpMenuTime' id='drpMenuTime'>7:00</option><option value='8:00' name='drpMenuTime' id='drpMenuTime'>8:00</option><option value='9:00' name='drpMenuTime' id='drpMenuTime'>9:00</option><option value='10:00' name='drpMenuTime' id='drpMenuTime'>10:00</option><option value='11:00' name='drpMenuTime' id='drpMenuTime'>11:00</option><option value='12:00' name='drpMenuTime' id='drpMenuTime'>12:00</option><option value='13:00' name='drpMenuTime' id='drpMenuTime'>13:00</option><option value='14:00' name='drpMenuTime' id='drpMenuTime'>14:00</option><option value='15:00' name='drpMenuTime' id='drpMenuTime'>15:00</option><option value='16:00' name='drpMenuTime' id='drpMenuTime'>16:00</option><option value='17:00' name='drpMenuTime' id='drpMenuTime'>17:00</option><option value='18:00' name='drpMenuTime' id='drpMenuTime'>18:00</option><option value='19:00' name='drpMenuTime' id='drpMenuTime'>19:00</option>
                    <option value='20:00' name='drpMenuTime' id='drpMenuTime'>20:00</option><option value='21:00' name='drpMenuTime' id='drpMenuTime'>21:00</option><option value='22:00' name='drpMenuTime' id='drpMenuTime'>22:00</option><option value='23:00' name='drpMenuTime' id='drpMenuTime'>23:00</option>
                 </select> 
                 <select id="Mon_select2" name="monday_select2"  >
-                    <option value='0' name'drpMenuDrtn' id="drpMenuTime" >--</option>
+                    <option value='0' name='drpMenuDrtn' id="drpMenuTime" >--</option>
                      <option value='1:00' name='drpMenuDrtn' id='drpMenuDrtn'>1:00 hr</option><option value='1:30' name='drpMenuDrtn' id='drpMenuDrtn'>1:30 hr</option><option value='2:00' name='drpMencuDrtn.' id='drpMenuDrtn'>2:00 hr</option><option value='2:30' name='drpMenuDrtn' id='drpMenuDrtn'>2:30 hr</option><option value='3:00' name='drpMenuDrtn' id='drpMenuDrtn'>3:00 hr</option><option value='3:30' name='drpMenuDrtn' id='drpMenuDrtn'>3:30 hr</option><option value='4:00' name='drpMenuDrtn' id='drpMenuDrtn'>4:00 hr</option><option value='4:30' name='drpMenuDrtn' id='drpMenuDrtn'>4:30 hr</option><option value='5:00' name='drpMenuDrtn' id='drpMenuDrtn'>5:00 hr</option><option value='5:30' name='drpMenuDrtn' id='drpMenuDrtn'>5:30 hr</option>
                      <option value='6:00' name='drpMenuDrtn' id='drpMenuDrtn'>6:00 hr</option>
                 </select>
@@ -184,13 +224,13 @@
             <tr>
               <td>
                   <select id="Mon_select3" name="monday_select3" >
-                   <option value='0' name'drpMenuTwoTime' id="drpMenuTime" >--</option>
+                   <option value='0' name='drpMenuTwoTime' id="drpMenuTime" >--</option>
                      <option value='6:00' name='drpMenuTwoTime' id='drpMenuTwoTime'>6:00</option><option value='7:00' name='drpMenuTwoTime' id='drpMenuTwoTime'>7:00</option><option value='8:00' name='drpMenuTwoTime' id='drpMenuTwoTime'>8:00</option><option value='9:00' name='drpMenuTwoTime' id='drpMenuTwoTime'>9:00</option><option value='10:00' name='drpMenuTwoTime' id='drpMenuTwoTime'>10:00</option><option value='11:00' name='drpMenuTwoTime' id='drpMenuTwoTime'>11:00</option><option value='12:00' name='drpMenuTwoTime' id='drpMenuTwoTime'>12:00</option><option value='13:00' name='drpMenuTwoTime' id='drpMenuTwoTime'>13:00</option>
                      <option value='14:00' name='drpMenuTwoTime' id='drpMenuTwoTime'>14:00</option><option value='15:00' name='drpMenuTwoTime' id='drpMenuTwoTime'>15:00</option><option value='16:00' name='drpMenuTwoTime' id='drpMenuTwoTime'>16:00</option><option value='17:00' name='drpMenuTwoTime' id='drpMenuTwoTime'>17:00</option><option value='18:00' name='drpMenuTwoTime' id='drpMenuTwoTime'>18:00</option><option value='19:00' name='drpMenuTwoTime' id='drpMenuTwoTime'>19:00</option><option value='20:00' name='drpMenuTwoTime' id='drpMenuTwoTime'>20:00</option><option value='21:00' name='drpMenuTwoTime' id='drpMenuTwoTime'>21:00</option>
                      <option value='22:00' name='drpMenuTwoTime' id='drpMenuTwoTime'>22:00</option><option value='23:00' name='drpMenuTwoTime' id='drpMenuTwoTime'>23:00</option>
                   </select>
                   <select id="Mon_select4" name="monday_select4" >
-                     <option value='0' name'drpMenuTwoDrtn' id="drpMenuTwoDrtn" >--</option>
+                     <option value='0' name='drpMenuTwoDrtn' id="drpMenuTwoDrtn" >--</option>
                       <option value='1:00' name='drpMenuTwoDrtn' id='drpMenuTwoDrtn'>1:00 hr</option><option value='1:30' name='drpMenuTwoDrtn' id='drpMenuTwoDrtn'>1:30 hr</option><option value='2:00' name='drpMenuTwoDrtn' id='drpMenuTwoDrtn'>2:00 hr</option><option value='2:30' name='drpMenuTwoDrtn' id='drpMenuTwoDrtn'>2:30 hr</option><option value='3:00' name='drpMenuTwoDrtn' id='drpMenuTwoDrtn'>3:00 hr</option><option value='3:30' name='drpMenuTwoDrtn' id='drpMenuTwoDrtn'>3:30 hr</option><option value='4:00' name='drpMenuTwoDrtn' id='drpMenuTwoDrtn'>4:00 hr</option><option value='4:30' name='drpMenuTwoDrtn' id='drpMenuTwoDrtn'>4:30 hr</option><option value='5:00' name='drpMenuTwoDrtn' id='drpMenuTwoDrtn'>5:00 hr</option><option value='5:30' name='drpMenuTwoDrtn' id='drpMenuTwoDrtn'>5:30 hr</option><option value='6:00' name='drpMenuTwoDrtn' id='drpMenuTwoDrtn'>6:00 hr</option>
                   </select>
               </td>
@@ -208,12 +248,12 @@
             <tr>
               <td>
                 <select id="Tue_select1" name="tuesday_select1" >
-                   <option value='0' name'drpMenuTime' id="drpMenuTime" >--</option>
+                   <option value='0' name='drpMenuTime' id="drpMenuTime" >--</option>
                    <option value='6:00' name='drpMenuTime' id='drpMenuTime'>6:00</option><option value='7:00' name='drpMenuTime' id='drpMenuTime'>7:00</option><option value='8:00' name='drpMenuTime' id='drpMenuTime'>8:00</option><option value='9:00' name='drpMenuTime' id='drpMenuTime'>9:00</option><option value='10:00' name='drpMenuTime' id='drpMenuTime'>10:00</option><option value='11:00' name='drpMenuTime' id='drpMenuTime'>11:00</option><option value='12:00' name='drpMenuTime' id='drpMenuTime'>12:00</option><option value='13:00' name='drpMenuTime' id='drpMenuTime'>13:00</option><option value='14:00' name='drpMenuTime' id='drpMenuTime'>14:00</option><option value='15:00' name='drpMenuTime' id='drpMenuTime'>15:00</option><option value='16:00' name='drpMenuTime' id='drpMenuTime'>16:00</option><option value='17:00' name='drpMenuTime' id='drpMenuTime'>17:00</option><option value='18:00' name='drpMenuTime' id='drpMenuTime'>18:00</option><option value='19:00' name='drpMenuTime' id='drpMenuTime'>19:00</option>
                    <option value='20:00' name='drpMenuTime' id='drpMenuTime'>20:00</option><option value='21:00' name='drpMenuTime' id='drpMenuTime'>21:00</option><option value='22:00' name='drpMenuTime' id='drpMenuTime'>22:00</option><option value='23:00' name='drpMenuTime' id='drpMenuTime'>23:00</option>
                 </select> 
                 <select id="Tue_select2" name="tuesday_select2" >
-                     <option value='0' name'drpMenuDrtn' id="drpMenuTime" >--</option>
+                     <option value='0' name='drpMenuDrtn' id="drpMenuTime" >--</option>
                      <option value='1:00' name='drpMenuDrtn' id='drpMenuDrtn'>1:00 hr</option><option value='1:30' name='drpMenuDrtn' id='drpMenuDrtn'>1:30 hr</option><option value='2:00' name='drpMencuDrtn.' id='drpMenuDrtn'>2:00 hr</option><option value='2:30' name='drpMenuDrtn' id='drpMenuDrtn'>2:30 hr</option><option value='3:00' name='drpMenuDrtn' id='drpMenuDrtn'>3:00 hr</option><option value='3:30' name='drpMenuDrtn' id='drpMenuDrtn'>3:30 hr</option><option value='4:00' name='drpMenuDrtn' id='drpMenuDrtn'>4:00 hr</option><option value='4:30' name='drpMenuDrtn' id='drpMenuDrtn'>4:30 hr</option><option value='5:00' name='drpMenuDrtn' id='drpMenuDrtn'>5:00 hr</option><option value='5:30' name='drpMenuDrtn' id='drpMenuDrtn'>5:30 hr</option>
                      <option value='6:00' name='drpMenuDrtn' id='drpMenuDrtn'>6:00 hr</option>
                 </select>
@@ -222,13 +262,13 @@
             <tr>
               <td>
                   <select id="Tue_select3" name="tuesday_select3" >
-                    <option value='0' name'drpMenuTwoTime' id="drpMenuTime" >--</option>
+                    <option value='0' name='drpMenuTwoTime' id="drpMenuTime" >--</option>
                      <option value='6:00' name='drpMenuTwoTime' id='drpMenuTwoTime'>6:00</option><option value='7:00' name='drpMenuTwoTime' id='drpMenuTwoTime'>7:00</option><option value='8:00' name='drpMenuTwoTime' id='drpMenuTwoTime'>8:00</option><option value='9:00' name='drpMenuTwoTime' id='drpMenuTwoTime'>9:00</option><option value='10:00' name='drpMenuTwoTime' id='drpMenuTwoTime'>10:00</option><option value='11:00' name='drpMenuTwoTime' id='drpMenuTwoTime'>11:00</option><option value='12:00' name='drpMenuTwoTime' id='drpMenuTwoTime'>12:00</option><option value='13:00' name='drpMenuTwoTime' id='drpMenuTwoTime'>13:00</option>
                      <option value='14:00' name='drpMenuTwoTime' id='drpMenuTwoTime'>14:00</option><option value='15:00' name='drpMenuTwoTime' id='drpMenuTwoTime'>15:00</option><option value='16:00' name='drpMenuTwoTime' id='drpMenuTwoTime'>16:00</option><option value='17:00' name='drpMenuTwoTime' id='drpMenuTwoTime'>17:00</option><option value='18:00' name='drpMenuTwoTime' id='drpMenuTwoTime'>18:00</option><option value='19:00' name='drpMenuTwoTime' id='drpMenuTwoTime'>19:00</option><option value='20:00' name='drpMenuTwoTime' id='drpMenuTwoTime'>20:00</option><option value='21:00' name='drpMenuTwoTime' id='drpMenuTwoTime'>21:00</option>
                      <option value='22:00' name='drpMenuTwoTime' id='drpMenuTwoTime'>22:00</option><option value='23:00' name='drpMenuTwoTime' id='drpMenuTwoTime'>23:00</option>
                   </select>
                   <select id="Tue_select4" name="tuesday_select4" >
-                     <option value='0' name'drpMenuTwoDrtn' id="drpMenuTwoDrtn" >--</option>
+                     <option value='0' name='drpMenuTwoDrtn' id="drpMenuTwoDrtn" >--</option>
                       <option value='1:00' name='drpMenuTwoDrtn' id='drpMenuTwoDrtn'>1:00 hr</option><option value='1:30' name='drpMenuTwoDrtn' id='drpMenuTwoDrtn'>1:30 hr</option><option value='2:00' name='drpMenuTwoDrtn' id='drpMenuTwoDrtn'>2:00 hr</option><option value='2:30' name='drpMenuTwoDrtn' id='drpMenuTwoDrtn'>2:30 hr</option><option value='3:00' name='drpMenuTwoDrtn' id='drpMenuTwoDrtn'>3:00 hr</option><option value='3:30' name='drpMenuTwoDrtn' id='drpMenuTwoDrtn'>3:30 hr</option><option value='4:00' name='drpMenuTwoDrtn' id='drpMenuTwoDrtn'>4:00 hr</option><option value='4:30' name='drpMenuTwoDrtn' id='drpMenuTwoDrtn'>4:30 hr</option><option value='5:00' name='drpMenuTwoDrtn' id='drpMenuTwoDrtn'>5:00 hr</option><option value='5:30' name='drpMenuTwoDrtn' id='drpMenuTwoDrtn'>5:30 hr</option><option value='6:00' name='drpMenuTwoDrtn' id='drpMenuTwoDrtn'>6:00 hr</option>
                   </select>
               </td>
@@ -240,13 +280,13 @@
             <tr>
               <td>
                 <select id="Wed_table1" name="wednesday_table1" >
-                   <option value='0' name'drpMenuTime' id="drpMenuTime" >--</option>
+                   <option value='0' name='drpMenuTime' id="drpMenuTime" >--</option>
                    <option value='6:00' name='drpMenuTime' id='drpMenuTime'>6:00</option><option value='7:00' name='drpMenuTime' id='drpMenuTime'>7:00</option><option value='8:00' name='drpMenuTime' id='drpMenuTime'>8:00</option><option value='9:00' name='drpMenuTime' id='drpMenuTime'>9:00</option><option value='10:00' name='drpMenuTime' id='drpMenuTime'>10:00</option><option value='11:00' name='drpMenuTime' id='drpMenuTime'>11:00</option><option value='12:00' name='drpMenuTime' id='drpMenuTime'>12:00</option><option value='13:00' name='drpMenuTime' id='drpMenuTime'>13:00</option><option value='14:00' name='drpMenuTime' id='drpMenuTime'>14:00</option><option value='15:00' name='drpMenuTime' id='drpMenuTime'>15:00</option><option value='16:00' name='drpMenuTime' id='drpMenuTime'>16:00</option><option value='17:00' name='drpMenuTime' id='drpMenuTime'>17:00</option><option value='18:00' name='drpMenuTime' id='drpMenuTime'>18:00</option><option value='19:00' name='drpMenuTime' id='drpMenuTime'>19:00</option>
                    <option value='20:00' name='drpMenuTime' id='drpMenuTime'>20:00</option><option value='21:00' name='drpMenuTime' id='drpMenuTime'>21:00</option><option value='22:00' name='drpMenuTime' id='drpMenuTime'>22:00</option><option value='23:00' name='drpMenuTime' id='drpMenuTime'>23:00</option>
                 </select> 
 
                 <select id="Wed_table2" name="wednesday_table2" >
-                   <option value='0' name'drpMenuDrtn' id="drpMenuTime" >--</option>
+                   <option value='0' name='drpMenuDrtn' id="drpMenuTime" >--</option>
                      <option value='1:00' name='drpMenuDrtn' id='drpMenuDrtn'>1:00 hr</option><option value='1:30' name='drpMenuDrtn' id='drpMenuDrtn'>1:30 hr</option><option value='2:00' name='drpMencuDrtn.' id='drpMenuDrtn'>2:00 hr</option><option value='2:30' name='drpMenuDrtn' id='drpMenuDrtn'>2:30 hr</option><option value='3:00' name='drpMenuDrtn' id='drpMenuDrtn'>3:00 hr</option><option value='3:30' name='drpMenuDrtn' id='drpMenuDrtn'>3:30 hr</option><option value='4:00' name='drpMenuDrtn' id='drpMenuDrtn'>4:00 hr</option><option value='4:30' name='drpMenuDrtn' id='drpMenuDrtn'>4:30 hr</option><option value='5:00' name='drpMenuDrtn' id='drpMenuDrtn'>5:00 hr</option><option value='5:30' name='drpMenuDrtn' id='drpMenuDrtn'>5:30 hr</option>
                      <option value='6:00' name='drpMenuDrtn' id='drpMenuDrtn'>6:00 hr</option>
                 </select>
@@ -255,13 +295,13 @@
             <tr>
               <td>
                   <select id="Wed_table3" name="wednesday_table3">
-                      <option value='0' name'drpMenuTwoTime' id="drpMenuTime" >--</option>
+                      <option value='0' name='drpMenuTwoTime' id="drpMenuTime" >--</option>
                      <option value='6:00' name='drpMenuTwoTime' id='drpMenuTwoTime'>6:00</option><option value='7:00' name='drpMenuTwoTime' id='drpMenuTwoTime'>7:00</option><option value='8:00' name='drpMenuTwoTime' id='drpMenuTwoTime'>8:00</option><option value='9:00' name='drpMenuTwoTime' id='drpMenuTwoTime'>9:00</option><option value='10:00' name='drpMenuTwoTime' id='drpMenuTwoTime'>10:00</option><option value='11:00' name='drpMenuTwoTime' id='drpMenuTwoTime'>11:00</option><option value='12:00' name='drpMenuTwoTime' id='drpMenuTwoTime'>12:00</option><option value='13:00' name='drpMenuTwoTime' id='drpMenuTwoTime'>13:00</option>
                      <option value='14:00' name='drpMenuTwoTime' id='drpMenuTwoTime'>14:00</option><option value='15:00' name='drpMenuTwoTime' id='drpMenuTwoTime'>15:00</option><option value='16:00' name='drpMenuTwoTime' id='drpMenuTwoTime'>16:00</option><option value='17:00' name='drpMenuTwoTime' id='drpMenuTwoTime'>17:00</option><option value='18:00' name='drpMenuTwoTime' id='drpMenuTwoTime'>18:00</option><option value='19:00' name='drpMenuTwoTime' id='drpMenuTwoTime'>19:00</option><option value='20:00' name='drpMenuTwoTime' id='drpMenuTwoTime'>20:00</option><option value='21:00' name='drpMenuTwoTime' id='drpMenuTwoTime'>21:00</option>
                      <option value='22:00' name='drpMenuTwoTime' id='drpMenuTwoTime'>22:00</option><option value='23:00' name='drpMenuTwoTime' id='drpMenuTwoTime'>23:00</option>
                   </select>
                   <select id="Wed_table4" name="wednesday_table4">
-                      <option value='0' name'drpMenuTwoDrtn' id="drpMenuTwoDrtn" >--</option>
+                      <option value='0' name='drpMenuTwoDrtn' id="drpMenuTwoDrtn" >--</option>
                       <option value='1:00' name='drpMenuTwoDrtn' id='drpMenuTwoDrtn'>1:00 hr</option><option value='1:30' name='drpMenuTwoDrtn' id='drpMenuTwoDrtn'>1:30 hr</option><option value='2:00' name='drpMenuTwoDrtn' id='drpMenuTwoDrtn'>2:00 hr</option><option value='2:30' name='drpMenuTwoDrtn' id='drpMenuTwoDrtn'>2:30 hr</option><option value='3:00' name='drpMenuTwoDrtn' id='drpMenuTwoDrtn'>3:00 hr</option><option value='3:30' name='drpMenuTwoDrtn' id='drpMenuTwoDrtn'>3:30 hr</option><option value='4:00' name='drpMenuTwoDrtn' id='drpMenuTwoDrtn'>4:00 hr</option><option value='4:30' name='drpMenuTwoDrtn' id='drpMenuTwoDrtn'>4:30 hr</option><option value='5:00' name='drpMenuTwoDrtn' id='drpMenuTwoDrtn'>5:00 hr</option><option value='5:30' name='drpMenuTwoDrtn' id='drpMenuTwoDrtn'>5:30 hr</option><option value='6:00' name='drpMenuTwoDrtn' id='drpMenuTwoDrtn'>6:00 hr</option>
                   </select>
               </td>
@@ -279,13 +319,13 @@
             <tr>
               <td>
                 <select id="Thu_select1" name="thursday_select1" >
-                   <option value='0' name'drpMenuTime' id="drpMenuTime" >--</option>
+                   <option value='0' name='drpMenuTime' id="drpMenuTime" >--</option>
                    <option value='6:00' name='drpMenuTime' id='drpMenuTime'>6:00</option><option value='7:00' name='drpMenuTime' id='drpMenuTime'>7:00</option><option value='8:00' name='drpMenuTime' id='drpMenuTime'>8:00</option><option value='9:00' name='drpMenuTime' id='drpMenuTime'>9:00</option><option value='10:00' name='drpMenuTime' id='drpMenuTime'>10:00</option><option value='11:00' name='drpMenuTime' id='drpMenuTime'>11:00</option><option value='12:00' name='drpMenuTime' id='drpMenuTime'>12:00</option><option value='13:00' name='drpMenuTime' id='drpMenuTime'>13:00</option><option value='14:00' name='drpMenuTime' id='drpMenuTime'>14:00</option><option value='15:00' name='drpMenuTime' id='drpMenuTime'>15:00</option><option value='16:00' name='drpMenuTime' id='drpMenuTime'>16:00</option><option value='17:00' name='drpMenuTime' id='drpMenuTime'>17:00</option><option value='18:00' name='drpMenuTime' id='drpMenuTime'>18:00</option><option value='19:00' name='drpMenuTime' id='drpMenuTime'>19:00</option>
                    <option value='20:00' name='drpMenuTime' id='drpMenuTime'>20:00</option><option value='21:00' name='drpMenuTime' id='drpMenuTime'>21:00</option><option value='22:00' name='drpMenuTime' id='drpMenuTime'>22:00</option><option value='23:00' name='drpMenuTime' id='drpMenuTime'>23:00</option>
                 </select> 
 
                 <select id="Thu_select2" name="thursday_select2" >
-                      <option value='0' name'drpMenuDrtn' id="drpMenuTime" >--</option>
+                      <option value='0' name='drpMenuDrtn' id="drpMenuTime" >--</option>
                      <option value='1:00' name='drpMenuDrtn' id='drpMenuDrtn'>1:00 hr</option><option value='1:30' name='drpMenuDrtn' id='drpMenuDrtn'>1:30 hr</option><option value='2:00' name='drpMencuDrtn.' id='drpMenuDrtn'>2:00 hr</option><option value='2:30' name='drpMenuDrtn' id='drpMenuDrtn'>2:30 hr</option><option value='3:00' name='drpMenuDrtn' id='drpMenuDrtn'>3:00 hr</option><option value='3:30' name='drpMenuDrtn' id='drpMenuDrtn'>3:30 hr</option><option value='4:00' name='drpMenuDrtn' id='drpMenuDrtn'>4:00 hr</option><option value='4:30' name='drpMenuDrtn' id='drpMenuDrtn'>4:30 hr</option><option value='5:00' name='drpMenuDrtn' id='drpMenuDrtn'>5:00 hr</option><option value='5:30' name='drpMenuDrtn' id='drpMenuDrtn'>5:30 hr</option>
                      <option value='6:00' name='drpMenuDrtn' id='drpMenuDrtn'>6:00 hr</option>
                 </select>
@@ -294,13 +334,13 @@
             <tr>
               <td>
                   <select id="Thu_select3" name="thursday_select3">
-                     <option value='0' name'drpMenuTwoTime' id="drpMenuTime" >--</option>
+                     <option value='0' name='drpMenuTwoTime' id="drpMenuTime" >--</option>
                      <option value='6:00' name='drpMenuTwoTime' id='drpMenuTwoTime'>6:00</option><option value='7:00' name='drpMenuTwoTime' id='drpMenuTwoTime'>7:00</option><option value='8:00' name='drpMenuTwoTime' id='drpMenuTwoTime'>8:00</option><option value='9:00' name='drpMenuTwoTime' id='drpMenuTwoTime'>9:00</option><option value='10:00' name='drpMenuTwoTime' id='drpMenuTwoTime'>10:00</option><option value='11:00' name='drpMenuTwoTime' id='drpMenuTwoTime'>11:00</option><option value='12:00' name='drpMenuTwoTime' id='drpMenuTwoTime'>12:00</option><option value='13:00' name='drpMenuTwoTime' id='drpMenuTwoTime'>13:00</option>
                      <option value='14:00' name='drpMenuTwoTime' id='drpMenuTwoTime'>14:00</option><option value='15:00' name='drpMenuTwoTime' id='drpMenuTwoTime'>15:00</option><option value='16:00' name='drpMenuTwoTime' id='drpMenuTwoTime'>16:00</option><option value='17:00' name='drpMenuTwoTime' id='drpMenuTwoTime'>17:00</option><option value='18:00' name='drpMenuTwoTime' id='drpMenuTwoTime'>18:00</option><option value='19:00' name='drpMenuTwoTime' id='drpMenuTwoTime'>19:00</option><option value='20:00' name='drpMenuTwoTime' id='drpMenuTwoTime'>20:00</option><option value='21:00' name='drpMenuTwoTime' id='drpMenuTwoTime'>21:00</option>
                      <option value='22:00' name='drpMenuTwoTime' id='drpMenuTwoTime'>22:00</option><option value='23:00' name='drpMenuTwoTime' id='drpMenuTwoTime'>23:00</option>
                   </select>
                   <select id="Thu_select4" name="thursday_select4" >
-                      <option value='0' name'drpMenuTwoDrtn' id="drpMenuTwoDrtn" >--</option>
+                      <option value='0' name='drpMenuTwoDrtn' id="drpMenuTwoDrtn" >--</option>
                       <option value='1:00' name='drpMenuTwoDrtn' id='drpMenuTwoDrtn'>1:00 hr</option><option value='1:30' name='drpMenuTwoDrtn' id='drpMenuTwoDrtn'>1:30 hr</option><option value='2:00' name='drpMenuTwoDrtn' id='drpMenuTwoDrtn'>2:00 hr</option><option value='2:30' name='drpMenuTwoDrtn' id='drpMenuTwoDrtn'>2:30 hr</option><option value='3:00' name='drpMenuTwoDrtn' id='drpMenuTwoDrtn'>3:00 hr</option><option value='3:30' name='drpMenuTwoDrtn' id='drpMenuTwoDrtn'>3:30 hr</option><option value='4:00' name='drpMenuTwoDrtn' id='drpMenuTwoDrtn'>4:00 hr</option><option value='4:30' name='drpMenuTwoDrtn' id='drpMenuTwoDrtn'>4:30 hr</option><option value='5:00' name='drpMenuTwoDrtn' id='drpMenuTwoDrtn'>5:00 hr</option><option value='5:30' name='drpMenuTwoDrtn' id='drpMenuTwoDrtn'>5:30 hr</option><option value='6:00' name='drpMenuTwoDrtn' id='drpMenuTwoDrtn'>6:00 hr</option>
                   </select>
               </td>
@@ -312,13 +352,13 @@
             <tr>
               <td>
                 <select id="Fri_select1" name="friday_select1" >
-                   <option value='0' name'drpMenuTime' id="drpMenuTime" >--</option>
+                   <option value='0' name='drpMenuTime' id="drpMenuTime" >--</option>
                    <option value='6:00' name='drpMenuTime' id='drpMenuTime'>6:00</option><option value='7:00' name='drpMenuTime' id='drpMenuTime'>7:00</option><option value='8:00' name='drpMenuTime' id='drpMenuTime'>8:00</option><option value='9:00' name='drpMenuTime' id='drpMenuTime'>9:00</option><option value='10:00' name='drpMenuTime' id='drpMenuTime'>10:00</option><option value='11:00' name='drpMenuTime' id='drpMenuTime'>11:00</option><option value='12:00' name='drpMenuTime' id='drpMenuTime'>12:00</option><option value='13:00' name='drpMenuTime' id='drpMenuTime'>13:00</option><option value='14:00' name='drpMenuTime' id='drpMenuTime'>14:00</option><option value='15:00' name='drpMenuTime' id='drpMenuTime'>15:00</option><option value='16:00' name='drpMenuTime' id='drpMenuTime'>16:00</option><option value='17:00' name='drpMenuTime' id='drpMenuTime'>17:00</option><option value='18:00' name='drpMenuTime' id='drpMenuTime'>18:00</option><option value='19:00' name='drpMenuTime' id='drpMenuTime'>19:00</option>
                    <option value='20:00' name='drpMenuTime' id='drpMenuTime'>20:00</option><option value='21:00' name='drpMenuTime' id='drpMenuTime'>21:00</option><option value='22:00' name='drpMenuTime' id='drpMenuTime'>22:00</option><option value='23:00' name='drpMenuTime' id='drpMenuTime'>23:00</option>
                 </select> 
 
                 <select  id="Fri_select2" name="friday_select2" >
-                      <option value='0' name'drpMenuDrtn' id="drpMenuTime" >--</option>
+                      <option value='0' name='drpMenuDrtn' id="drpMenuTime" >--</option>
                      <option value='1:00' name='drpMenuDrtn' id='drpMenuDrtn'>1:00 hr</option><option value='1:30' name='drpMenuDrtn' id='drpMenuDrtn'>1:30 hr</option><option value='2:00' name='drpMencuDrtn.' id='drpMenuDrtn'>2:00 hr</option><option value='2:30' name='drpMenuDrtn' id='drpMenuDrtn'>2:30 hr</option><option value='3:00' name='drpMenuDrtn' id='drpMenuDrtn'>3:00 hr</option><option value='3:30' name='drpMenuDrtn' id='drpMenuDrtn'>3:30 hr</option><option value='4:00' name='drpMenuDrtn' id='drpMenuDrtn'>4:00 hr</option><option value='4:30' name='drpMenuDrtn' id='drpMenuDrtn'>4:30 hr</option><option value='5:00' name='drpMenuDrtn' id='drpMenuDrtn'>5:00 hr</option><option value='5:30' name='drpMenuDrtn' id='drpMenuDrtn'>5:30 hr</option>
                      <option value='6:00' name='drpMenuDrtn' id='drpMenuDrtn'>6:00 hr</option>
                 </select>
@@ -327,13 +367,13 @@
             <tr>
               <td> 
                   <select  id="Fri_select3" name="friday_select3">
-                     <option value='0' name'drpMenuTwoTime' id="drpMenuTime" >--</option> 
+                     <option value='0' name='drpMenuTwoTime' id="drpMenuTime" >--</option> 
                      <option value='6:00' name='drpMenuTwoTime' id='drpMenuTwoTime'>6:00</option><option value='7:00' name='drpMenuTwoTime' id='drpMenuTwoTime'>7:00</option><option value='8:00' name='drpMenuTwoTime' id='drpMenuTwoTime'>8:00</option><option value='9:00' name='drpMenuTwoTime' id='drpMenuTwoTime'>9:00</option><option value='10:00' name='drpMenuTwoTime' id='drpMenuTwoTime'>10:00</option><option value='11:00' name='drpMenuTwoTime' id='drpMenuTwoTime'>11:00</option><option value='12:00' name='drpMenuTwoTime' id='drpMenuTwoTime'>12:00</option><option value='13:00' name='drpMenuTwoTime' id='drpMenuTwoTime'>13:00</option>
                      <option value='14:00' name='drpMenuTwoTime' id='drpMenuTwoTime'>14:00</option><option value='15:00' name='drpMenuTwoTime' id='drpMenuTwoTime'>15:00</option><option value='16:00' name='drpMenuTwoTime' id='drpMenuTwoTime'>16:00</option><option value='17:00' name='drpMenuTwoTime' id='drpMenuTwoTime'>17:00</option><option value='18:00' name='drpMenuTwoTime' id='drpMenuTwoTime'>18:00</option><option value='19:00' name='drpMenuTwoTime' id='drpMenuTwoTime'>19:00</option><option value='20:00' name='drpMenuTwoTime' id='drpMenuTwoTime'>20:00</option><option value='21:00' name='drpMenuTwoTime' id='drpMenuTwoTime'>21:00</option>
                      <option value='22:00' name='drpMenuTwoTime' id='drpMenuTwoTime'>22:00</option><option value='23:00' name='drpMenuTwoTime' id='drpMenuTwoTime'>23:00</option>
                   </select>
                   <select id="Fri_select4" name="friday_select4">
-                      <option value='0' name'drpMenuTwoDrtn' id="drpMenuTwoDrtn" >--</option>
+                      <option value='0' name='drpMenuTwoDrtn' id="drpMenuTwoDrtn" >--</option>
                       <option value='1:00' name='drpMenuTwoDrtn' id='drpMenuTwoDrtn'>1:00 hr</option><option value='1:30' name='drpMenuTwoDrtn' id='drpMenuTwoDrtn'>1:30 hr</option><option value='2:00' name='drpMenuTwoDrtn' id='drpMenuTwoDrtn'>2:00 hr</option><option value='2:30' name='drpMenuTwoDrtn' id='drpMenuTwoDrtn'>2:30 hr</option><option value='3:00' name='drpMenuTwoDrtn' id='drpMenuTwoDrtn'>3:00 hr</option><option value='3:30' name='drpMenuTwoDrtn' id='drpMenuTwoDrtn'>3:30 hr</option><option value='4:00' name='drpMenuTwoDrtn' id='drpMenuTwoDrtn'>4:00 hr</option><option value='4:30' name='drpMenuTwoDrtn' id='drpMenuTwoDrtn'>4:30 hr</option><option value='5:00' name='drpMenuTwoDrtn' id='drpMenuTwoDrtn'>5:00 hr</option><option value='5:30' name='drpMenuTwoDrtn' id='drpMenuTwoDrtn'>5:30 hr</option><option value='6:00' name='drpMenuTwoDrtn' id='drpMenuTwoDrtn'>6:00 hr</option>
                   </select>
               </td>
@@ -350,13 +390,13 @@
             <tr>
               <td>
                 <select id="Sat_select1" name="saturday_select1" >
-                   <option value='0' name'drpMenuTime' id="drpMenuTime" >--</option>
+                   <option value='0' name='drpMenuTime' id="drpMenuTime" >--</option>
                    <option value='6:00' name='drpMenuTime' id='drpMenuTime'>6:00</option><option value='7:00' name='drpMenuTime' id='drpMenuTime'>7:00</option><option value='8:00' name='drpMenuTime' id='drpMenuTime'>8:00</option><option value='9:00' name='drpMenuTime' id='drpMenuTime'>9:00</option><option value='10:00' name='drpMenuTime' id='drpMenuTime'>10:00</option><option value='11:00' name='drpMenuTime' id='drpMenuTime'>11:00</option><option value='12:00' name='drpMenuTime' id='drpMenuTime'>12:00</option><option value='13:00' name='drpMenuTime' id='drpMenuTime'>13:00</option><option value='14:00' name='drpMenuTime' id='drpMenuTime'>14:00</option><option value='15:00' name='drpMenuTime' id='drpMenuTime'>15:00</option><option value='16:00' name='drpMenuTime' id='drpMenuTime'>16:00</option><option value='17:00' name='drpMenuTime' id='drpMenuTime'>17:00</option><option value='18:00' name='drpMenuTime' id='drpMenuTime'>18:00</option><option value='19:00' name='drpMenuTime' id='drpMenuTime'>19:00</option>
                    <option value='20:00' name='drpMenuTime' id='drpMenuTime'>20:00</option><option value='21:00' name='drpMenuTime' id='drpMenuTime'>21:00</option><option value='22:00' name='drpMenuTime' id='drpMenuTime'>22:00</option><option value='23:00' name='drpMenuTime' id='drpMenuTime'>23:00</option>
                 </select> 
 
                 <select id="Sat_select2" name="saturday_select2" >
-                     <option value='0' name'drpMenuDrtn' id="drpMenuTime" >--</option>
+                     <option value='0' name='drpMenuDrtn' id="drpMenuTime" >--</option>
                      <option value='1:00' name='drpMenuDrtn' id='drpMenuDrtn'>1:00 hr</option><option value='1:30' name='drpMenuDrtn' id='drpMenuDrtn'>1:30 hr</option><option value='2:00' name='drpMencuDrtn.' id='drpMenuDrtn'>2:00 hr</option><option value='2:30' name='drpMenuDrtn' id='drpMenuDrtn'>2:30 hr</option><option value='3:00' name='drpMenuDrtn' id='drpMenuDrtn'>3:00 hr</option><option value='3:30' name='drpMenuDrtn' id='drpMenuDrtn'>3:30 hr</option><option value='4:00' name='drpMenuDrtn' id='drpMenuDrtn'>4:00 hr</option><option value='4:30' name='drpMenuDrtn' id='drpMenuDrtn'>4:30 hr</option><option value='5:00' name='drpMenuDrtn' id='drpMenuDrtn'>5:00 hr</option><option value='5:30' name='drpMenuDrtn' id='drpMenuDrtn'>5:30 hr</option>
                      <option value='6:00' name='drpMenuDrtn' id='drpMenuDrtn'>6:00 hr</option>
                 </select>
@@ -367,13 +407,13 @@
               <td>
 
                   <select id="Sat_select3" name="saturday_select3">
-                    <option value='0' name'drpMenuTwoTime' id="drpMenuTime" >--</option>
+                    <option value='0' name='drpMenuTwoTime' id="drpMenuTime" >--</option>
                      <option value='6:00' name='drpMenuTwoTime' id='drpMenuTwoTime'>6:00</option><option value='7:00' name='drpMenuTwoTime' id='drpMenuTwoTime'>7:00</option><option value='8:00' name='drpMenuTwoTime' id='drpMenuTwoTime'>8:00</option><option value='9:00' name='drpMenuTwoTime' id='drpMenuTwoTime'>9:00</option><option value='10:00' name='drpMenuTwoTime' id='drpMenuTwoTime'>10:00</option><option value='11:00' name='drpMenuTwoTime' id='drpMenuTwoTime'>11:00</option><option value='12:00' name='drpMenuTwoTime' id='drpMenuTwoTime'>12:00</option><option value='13:00' name='drpMenuTwoTime' id='drpMenuTwoTime'>13:00</option>
                      <option value='14:00' name='drpMenuTwoTime' id='drpMenuTwoTime'>14:00</option><option value='15:00' name='drpMenuTwoTime' id='drpMenuTwoTime'>15:00</option><option value='16:00' name='drpMenuTwoTime' id='drpMenuTwoTime'>16:00</option><option value='17:00' name='drpMenuTwoTime' id='drpMenuTwoTime'>17:00</option><option value='18:00' name='drpMenuTwoTime' id='drpMenuTwoTime'>18:00</option><option value='19:00' name='drpMenuTwoTime' id='drpMenuTwoTime'>19:00</option><option value='20:00' name='drpMenuTwoTime' id='drpMenuTwoTime'>20:00</option><option value='21:00' name='drpMenuTwoTime' id='drpMenuTwoTime'>21:00</option>
                      <option value='22:00' name='drpMenuTwoTime' id='drpMenuTwoTime'>22:00</option><option value='23:00' name='drpMenuTwoTime' id='drpMenuTwoTime'>23:00</option>
                   </select>
                   <select id="Sat_select4" name="saturday_select4" >
-                      <option value='0' name'drpMenuTwoDrtn' id="drpMenuTwoDrtn" >--</option>
+                      <option value='0' name='drpMenuTwoDrtn' id="drpMenuTwoDrtn" >--</option>
                       <option value='1:00' name='drpMenuTwoDrtn' id='drpMenuTwoDrtn'>1:00 hr</option><option value='1:30' name='drpMenuTwoDrtn' id='drpMenuTwoDrtn'>1:30 hr</option><option value='2:00' name='drpMenuTwoDrtn' id='drpMenuTwoDrtn'>2:00 hr</option><option value='2:30' name='drpMenuTwoDrtn' id='drpMenuTwoDrtn'>2:30 hr</option><option value='3:00' name='drpMenuTwoDrtn' id='drpMenuTwoDrtn'>3:00 hr</option><option value='3:30' name='drpMenuTwoDrtn' id='drpMenuTwoDrtn'>3:30 hr</option><option value='4:00' name='drpMenuTwoDrtn' id='drpMenuTwoDrtn'>4:00 hr</option><option value='4:30' name='drpMenuTwoDrtn' id='drpMenuTwoDrtn'>4:30 hr</option><option value='5:00' name='drpMenuTwoDrtn' id='drpMenuTwoDrtn'>5:00 hr</option><option value='5:30' name='drpMenuTwoDrtn' id='drpMenuTwoDrtn'>5:30 hr</option><option value='6:00' name='drpMenuTwoDrtn' id='drpMenuTwoDrtn'>6:00 hr</option>
                   </select>
               </td>
