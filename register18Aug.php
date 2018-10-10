@@ -77,18 +77,45 @@
             <?php 
               include("connectionDB.php");
               $counter = 1;
-              while($counter<=3)
+              
+              while($counter<=5)
               {
-                echo "<p><label> Please Choose the category of your skill".$counter." </label></p>";
-                if($counter==1)
+                $counter_aux=0;
+                if($counter<4)
+                {
+                  echo "<p><label> Please Choose the category of your skill".$counter." </label></p>";  
+                }else
+                {
+                  if($counter==4)
+                  {
+                    if($counter_aux==0)
+                    {
+                      echo "<p><label> </label></p>";
+                      echo "<p><label> </label></p>";
+                      echo "<p><label> </label></p>";
+                      echo "<p><label style='padding-top:40px' > ------------------------------------------------------------- </label></p>";
+                      echo "<p><label>  Choose the Skills you are interested in </label></p>";
+                      echo "<p><label> ------------------------------------------------------------- </label></p>";
+                      ++$counter_aux;
+                    }
+                    echo "<p><label> Please Choose the category of the skill </label></p>";  
+                    echo "<p><label> You are interested in (1) </label></p>";  
+                  }else
+                  {
+                    if($counter==5)
+                    {
+                      echo "<p><label> Please Choose the category of the skill </label></p>";  
+                      echo "<p><label> You are interested in (2) </label></p>";
+                    }
+                  }
+                }
+                if($counter==1 || $counter==4)
                 {
                   echo "<p style='color:red'>*</p>";
                 }
-                $seldb = @mysqli_select_db($db_link, "skillsdb");
-                if(!$seldb) die("資料庫選擇失敗！Error cagado");
-                $sql_getCategory = "SELECT * FROM `category_skill` ;";
-                $result_getCategory = mysqli_query($db_link, $sql_getCategory);
-                if($counter == 1)
+                //This IF is for letting the user choose the First DropDown and not the second one.
+                //Obligates the user to pick on from the first DrpDown and then the second DrpDown it will be enabled.
+                if($counter == 1 || $counter==4)
                 {
                     echo "<select name='slct_category".$counter."' id='slct_category".$counter."' >";
                 }else
@@ -96,6 +123,11 @@
                   echo "<select name='slct_category".$counter."' id='slct_category".$counter."' disabled>";
                 }
                 echo "<option name='slc_category".$counter."' id='slct_category".$counter."' value='0' selected='selected' >Select a Category</option>";
+                //Code getting the data from the Database to be used by all the MAIN DRPDOWN
+                $seldb = @mysqli_select_db($db_link, "skillsdb");
+                if(!$seldb) die("資料庫選擇失敗！Error cagado");
+                $sql_getCategory = "SELECT * FROM `category_skill` ;";
+                $result_getCategory = mysqli_query($db_link, $sql_getCategory);
                 if($result_getCategory)
                 {
                   while($row_result = mysqli_fetch_assoc($result_getCategory))
@@ -104,9 +136,18 @@
                   }
                 }
                 echo "</select></p>";
-                echo "<p><label> Please Choose the Sub-Category".$counter." </label></p>";
+                if($counter<4)
+                {
+                  echo "<p><label> Please Choose the Sub-Category".$counter." </label></p>";
+                }else
+                {
+                  if($counter >= 4)
+                  {
+                    echo "<p><label> Please Choose the Sub-Category </label></p>";
+                  }
+                }
                 echo "<p>";
-                if($counter==1)
+                if($counter==1 || $counter==4)
                 {
                   echo "<p style='color:red'>*</p>";
                   echo "<select name='sub_category".$counter."' id='sub_category".$counter."'>";
@@ -124,6 +165,29 @@
                 */
                 $counter +=1;
               }
+              /*
+              $counter2=4;
+              echo "<p><label> ------------------------------------------------------------- </label></p>";
+              echo "<p><label> ---------- Choose the Skiils you are interested in ---------- </label></p>";
+              echo "<p><label> ------------------------------------------------------------- </label></p>";
+              while($counter2<=5)
+              {
+                if($counter2 == 4)
+                {
+                    echo "<select name='slct_category".$counter2."' id='slct_category".$counter2."' >";
+                }else
+                {
+                  echo "<select name='slct_category".$counter2."' id='slct_category".$counter2."' disabled>";
+                }
+                echo "<option name='slc_category".$counter2."' id='slct_category".$counter2."' value='0' selected='selected' >Select a Category</option>";
+                if($result_getCategory)
+                {
+                  while($row_result = mysqli_fetch_assoc($result_getCategory))
+                  {
+                    echo "<option value='".$row_result["id_category"]."' name='skill_category".$counter."' id='".$row_result["id_category"]."'>".$row_result["name_category"]."</option>";
+                  }
+                }
+              }*/
             ?>
       <!--------------------------------------- SKILL CATEGORY SECTION ---------------------------   -->
       <!--------------------------------------- SKILL CATEGORY SECTION ---------------------------   -->
@@ -458,9 +522,15 @@
     $('#slct_category1').change(function(){
        loadingMax("#slct_category1","#sub_category1");
     });
+    $('#slct_category4').change(function(){
+       loadingMax("#slct_category4","#sub_category4");
+    });
     //CHANGE THE SKILLS WHEN THE CATEGORY CHANGE  DROPDOWN--->>>>>2
     $('#slct_category2').change(function(){
       loadingMax("#slct_category2","#sub_category2");
+    });
+    $('#slct_category5').change(function(){
+      loadingMax("#slct_category5","#sub_category5");
     });
     //CHANGE THE SKILLS WHEN THE CATEGORY CHANGE  DROPDOWN--->>>>>3
     $('#slct_category3').change(function(){
@@ -472,6 +542,13 @@
       {
           $("#slct_category2").prop("disabled",false);
           $("#sub_category2").prop("disabled",false);
+      }
+    });
+    $("#sub_category4").change(function(){
+      if(  $("#sub_category4").val() != "0" )
+      {
+          $("#slct_category5").prop("disabled",false);
+          $("#sub_category5").prop("disabled",false);
       }
     });
     $("#sub_category2").change(function(){
@@ -570,7 +647,10 @@
         var select_department;
         var slct_category1; var slct_category2;   var slct_category3; 
         var sub_category1;  var sub_category2;    var sub_category3;
+        var sub_category_interested4; var sub_category_interested5;
         var arrays_subCategories=[];
+        var arrays_subCategories_interested=[];
+        var counterArraySubC_interested=0;
         var counterArraySubC = 0;
         //var image_name = $("#image_file").val();
         /*if(image_name == '')
@@ -659,6 +739,32 @@
         {
           //alert("You have to choose one skill at least");
           flag_var = true;
+        }
+        //CHECKING FOR THE SKILLS THAT THE USER IS INTERESTED IN
+
+        if( ( $("#slct_category4").val() != "0"  ) )
+        {
+            if( ($("#sub_category4").val()) != "0" )
+            {
+              sub_category_interested4 = $("#sub_category4").val();
+              arrays_subCategories_interested[counterArraySubC_interested++] = sub_category_interested4;
+              if( ( $("#slct_category5").val() != "0"  ) )
+              {
+                if( ($("#sub_category5").val()) != "0")
+                {
+                    sub_category_interested5 = $("#sub_category5").val();
+                    arrays_subCategories_interested[counterArraySubC_interested++] = sub_category_interested5;
+                }else
+                {
+                  //alert("Have to choose a sub-category for skill5 interested!");
+                  flag_var = true;
+                }
+              }
+            }else
+            {
+              //alert("Have to choose a sub-category for skill4 INTERESTED!");
+              flag_var = true;
+            }
         }
         //-------------------------------------------------------------------------------------------------------------------
         //-------------------------------------------------------------------------------------------------------------------
@@ -804,6 +910,8 @@
           totalArray[9]=myArray; //myArray for the Time
           totalArray[10] = counter_array; //Number of data in myArray
           totalArray[11] = counterArraySubC;//Number of data in the arrays_subCategories array
+          totalArray[12] = arrays_subCategories_interested;
+          totalArray[13] = counterArraySubC_interested;
           //We will check that the user it is not created in the DB.
           //In the ALERT BELOW I HAVE TO CHECK THE TIME SELECTED BY PRINTING ON AN ALERT.
           

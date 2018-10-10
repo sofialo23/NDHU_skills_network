@@ -12,10 +12,11 @@
 	    $totalArray[5] = $_POST["#btMe"]; //aboutme_valuetxt;
 	    $totalArray[6] = $_POST["#email"]; //email_valuetxt; 
 	    $totalArray[7]=$_POST["select_department"]; //select_department; 
-	    $totalArray[8]= $_POST[""]; //arrays_subCategories; //Array for the sub-categories of skills selected
+	    $totalArray[8]= $_POST["arrays_subCategories"]; //arrays_subCategories; //Array for the sub-categories of skills selected
 	    $totalArray[9]=$_POST["myArray"]; //myArray; //myArray for the Time
 	    $totalArray[10] = $_POST["counter_array"]; //counter_array; //Number of data in myArray
-	    $totalArray[11] = $_POST["counterArraySubC"]; //counterArraySubC;
+	    $totalArray[12] = $_POST["arrays_subCategories_interested"]; //counterArraySubC;
+	    $totalArray[13] = $_POST["counterArraySubC_interested"]; //counterArraySubC;
 	    */
 		$timeArray = $totalArray[9];
 		$counterForTime = $totalArray[10];
@@ -67,14 +68,16 @@
 		if( $Checking_both_inserts == true)
 		{
 			$arrays_subc = $totalArray[8];//Array of the sub-skills
+			$arrays_subc_interested = $totalArray[12];
+			$counter_arrays_subc_interested = $totalArray[13];
 			$counter_arrays_subc = $totalArray[11];//Number of subskills the user offers 
-			$flag2=0;
+			$flag2=0;$flag3=0;//Counter from 0 that will reach the counter of the subc_skills-1. Because the counter_arrays_sub only gives us a number and since we starting from 0, has to be -1.
 			//-----------------------------------------------------------------------------------------------------------------------------
-			$checking2 = false;
+			$checking2 = false; $checking3 = false;
 			while($flag2<=$counter_arrays_subc-1)
 			{
 				
-				$query_user_skill = "INSERT INTO `user_skills` (`id_userskill`,`student_id`, `id_skill`) VALUES (NULL,'".$totalArray[1]."','".$arrays_subc[$flag2]."');";
+				$query_user_skill = "INSERT INTO `user_skills` (`id_userskill`,`student_id`, `id_skill`,`flag_interested`) VALUES (NULL,'".$totalArray[1]."','".$arrays_subc[$flag2]."','0');";
 				//echo "aler($query_user_skill);";
 				$result_query_user_skill = mysqli_query($db_link,$query_user_skill);
 				if($result_query_user_skill)
@@ -89,7 +92,24 @@
 				}
 				$flag2++;
 			}
-			if($checking2 == true)
+			while( $flag3<=$counter_arrays_subc_interested-1 )
+			{
+				$query_user_skill2 = "INSERT INTO `user_skills` (`id_userskill`,`student_id`, `id_skill`,`flag_interested`) VALUES (NULL,'".$totalArray[1]."','".$arrays_subc[$flag2]."','1');";
+				//echo "aler($query_user_skill);";
+				$result_query_user_skill2 = mysqli_query($db_link,$query_user_skill2);
+				if($result_query_user_skill2)
+				{
+					//echo "Skill inserted related to the USER";
+					$checking3=true;//echo "Succesfully Inserted Value, arrays_subc, gracias PUTO";
+				}else
+				{
+					//echo "Failure2";
+					//echo "False In -> (SubSkill ID: ) ".$arrays_subc[$flag2].";";
+					$checking3 = false;
+				}
+				$flag3++;
+			}
+			if(($checking2 == true) && ($checking3 == true))
 			{
 
 				echo "Success";
