@@ -15,7 +15,7 @@
 	    $totalArray[8]= $_POST["arrays_subCategories"]; //arrays_subCategories; //Array for the sub-categories of skills selected
 	    $totalArray[9]=$_POST["myArray"]; //myArray; //myArray for the Time
 	    $totalArray[10] = $_POST["counter_array"]; //counter_array; //Number of data in myArray
-	    $totalArray[12] = $_POST["arrays_subCategories_interested"]; //counterArraySubC;
+	    $totalArray[12] = $_POST["arrays_subCategories_interested"]; //Array of the interested skills;
 	    $totalArray[13] = $_POST["counterArraySubC_interested"]; //counterArraySubC;
 	    */
 		$timeArray = $totalArray[9];
@@ -94,7 +94,8 @@
 			}
 			while( $flag3<=$counter_arrays_subc_interested-1 )
 			{
-				$query_user_skill2 = "INSERT INTO `user_skills` (`id_userskill`,`student_id`, `id_skill`,`flag_interested`) VALUES (NULL,'".$totalArray[1]."','".$arrays_subc[$flag2]."','1');";
+				$query_user_skill2 = "INSERT INTO `user_skills` (`id_userskill`,`student_id`, `id_skill`,`flag_interested`) VALUES (NULL,'".$totalArray[1]."','".$arrays_subc_interested[$flag2]."','1');";
+				$echo $arrays_subc_interested[$flag2];
 				//echo "aler($query_user_skill);";
 				$result_query_user_skill2 = mysqli_query($db_link,$query_user_skill2);
 				if($result_query_user_skill2)

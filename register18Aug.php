@@ -910,7 +910,7 @@
           totalArray[9]=myArray; //myArray for the Time
           totalArray[10] = counter_array; //Number of data in myArray
           totalArray[11] = counterArraySubC;//Number of data in the arrays_subCategories array
-          totalArray[12] = arrays_subCategories_interested;
+          totalArray[12] = arrays_subCategories_interested; // ARRAY OF THE INTERESTED IN SKILLS
           totalArray[13] = counterArraySubC_interested;
           //We will check that the user it is not created in the DB.
           //In the ALERT BELOW I HAVE TO CHECK THE TIME SELECTED BY PRINTING ON AN ALERT.
