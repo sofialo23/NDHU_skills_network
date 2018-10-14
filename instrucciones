@@ -1,7 +1,9 @@
 Andres:
-*Sacar foto en user-mainpage
+*Sacar foto en user-mainpage 
+(Hay error en la línea para insertar en la tabla de las skills, es en la misma tabla de los skills que ofrece pero con una columna 'flag_interested' con valor 1 que
+quiere decir si está interesado o no.)
 *Mensajes entre usuarios
-*temas que está interesado.
+*temas que está interesado (DONE on 2018/10/12)
 
 Sofia:
 *Modificar Hora y Foto
