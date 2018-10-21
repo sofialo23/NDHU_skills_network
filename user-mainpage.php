@@ -20,12 +20,30 @@
 	<div class="info"> 
       <h1 align = " right" >Welcome, 
 	  <?php 
-	  include('connectionDB.php');
+	  	include('connectionDB.php');
 		session_start();
    
 		$id = $_SESSION['logged_user']; // the student id of the user
 		$loggeduser = $_SESSION['user_name'];
-		
+
+		$sql = "SELECT * FROM user_data WHERE student_id='$id'";
+        $result = mysqli_query($db_link,$sql);
+        
+        
+        $row = mysqli_fetch_array($result, MYSQLI_ASSOC);
+        //$data['name']=$row['name'];
+        
+        if(mysqli_num_rows($result)==1){
+            
+            $imagen = $row['photo'];
+            $_SESSION['image'] = $imagen;
+            //echo '<img src="'.$imagen.'" height="42" width="42" />';
+         }   
+
+
+
+
+		//$image = $_SESSION['image'];
 		/*
 	
 	   $ses_sql = mysqli_query($db_link,"select `name` from `user_data` where `student_id` = '$id' ");
@@ -36,6 +54,7 @@
 	  echo $loggeduser;
 	   ?> </h1>	
 	   <a  href="logout.php" style="float: right;">Log Out</a> <br>
+	   <img src="<?php  echo $_SESSION['image'];?>"  height="90" width="100" /> <!-- THIS IS THE PICTURE OF THE USER IN THE DB -->
 
     </div>
 
