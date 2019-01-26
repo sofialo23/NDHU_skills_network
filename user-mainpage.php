@@ -66,36 +66,42 @@
 		$id = $_SESSION['logged_user']; // gets the student id of the user
 		
 		$userskill = mysqli_query($db_link,"select `id_skill` from `user_skills` where `student_id` = '$id' and `skill_status` = 'interested' "); // gets the id of the skill of the logged user
-		for ($i=0; $i <3 ; $i++) { 
-$fila = mysqli_fetch_array($userskill, MYSQLI_ASSOC);
+		for ($i=1; $i <=3 ; $i++) { 
+			$friend = "friend" . $i;
+
+	  
+		$fila = mysqli_fetch_array($userskill, MYSQLI_ASSOC);
 //echo "your skill id is : ";
 			$idskill = $fila['id_skill'];
-			//echo $idskill; echo "<br />\n";
-			
+			//echo $idskill; echo "<br />\n";	
 			// gets the id of the user who offers that skill
 			//echo "the id of the user who offers that skill is : ";
 			$requestid = mysqli_query($db_link, "select `student_id` from `user_skills` where `id_skill` = '$idskill' and `skill_status` = 'offers' ");
 			$value2 = mysqli_fetch_array($requestid, MYSQLI_ASSOC);
 			$idwhooffers= $value2['student_id'];
 			//echo $idwhooffers; echo "<br />\n";
-			
-			
 			//gets the name of the user who offers that skill
 			echo "Username : ";
 			$requestname = mysqli_query($db_link, "select distinct `name` from `user_data` where `student_id` = '$idwhooffers' ");
 			$value3 = mysqli_fetch_array($requestname, MYSQLI_ASSOC);
 			$namewhooffers= $value3['name'];
+			$_SESSION['friend']= $namewhooffers;
+			
+			?>
+	   <a href="friendProfile.php"><?php 
 			echo $namewhooffers; 
-			echo "&nbsp &nbsp &nbsp &nbsp\t"; echo "&nbsp &nbsp &nbsp &nbsp\t"; 
+			
+			?>
+		</a>
+		<?php 
 			//echo "<br />\n";
-			//echo "<br />\n";
-
-			# code...
+			echo "<br> <br>";
 		}
-		
+			  ?>
+	   
 	
-		
-	   ?>
+		<br>
+	  
 	</p>
 	
 	<br> <br>
