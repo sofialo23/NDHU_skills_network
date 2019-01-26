@@ -1,7 +1,5 @@
 Andres:
 *Sacar foto en user-mainpage 
-(Hay error en la línea para insertar en la tabla de las skills, es en la misma tabla de los skills que ofrece pero con una columna 'flag_interested' con valor 1 que
-quiere decir si está interesado o no.)
 *Mensajes entre usuarios
 *temas que está interesado (DONE on 2018/10/12)
 
@@ -11,3 +9,12 @@ Sofia:
 
 General:
 *Recomendaciones de lugares (google MAPS)
+
+
+****Andres
+I have to put in Picture18August
+the same as in login-page.php at the top 
+in order to start the session from there.
+So the page user-mainpage.php can have the 
+same parameters in order to continue with the same session
+as when the user login.

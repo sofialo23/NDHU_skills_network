@@ -35,7 +35,7 @@
 					  $_SESSION['logged_user'] = $studentid;
 					  $_SESSION['user_name'] = $row['name'];
 					  $_SESSION['correo'] = $row['email'];
-		
+					  $_SESSION['image'] = $row['photo'];
 					  
 						header ("location: user-mainpage.php");
 							/*if($studentid=='admin')

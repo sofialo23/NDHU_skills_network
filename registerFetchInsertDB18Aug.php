@@ -94,8 +94,8 @@
 			}
 			while( $flag3<=$counter_arrays_subc_interested-1 )
 			{
-				$query_user_skill2 = "INSERT INTO `user_skills` (`id_userskill`,`student_id`, `id_skill`,`flag_interested`) VALUES (NULL,'".$totalArray[1]."','".$arrays_subc_interested[$flag2]."','1');";
-				$echo $arrays_subc_interested[$flag2];
+				$query_user_skill2 = "INSERT INTO `user_skills` (`id_userskill`,`student_id`, `id_skill`,`flag_interested`) VALUES (NULL,'".$totalArray[1]."','".$arrays_subc_interested[$flag3]."','1');";
+				//echo $query_user_skill2;
 				//echo "aler($query_user_skill);";
 				$result_query_user_skill2 = mysqli_query($db_link,$query_user_skill2);
 				if($result_query_user_skill2)

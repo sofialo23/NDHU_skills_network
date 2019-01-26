@@ -1,7 +1,78 @@
-<?php
-  session_start();
+<!--  login page -->
+ <?php
+     
+      include('connectionDB.php');
+     // session_start();
+    
+     if($_SERVER["REQUEST_METHOD"] == "POST") {
+       if (isset($_POST['sumit'])){
+    
+         $stid_parameter = $_POST["image_id"];
 
-?>
+        $sql = "SELECT * FROM user_data WHERE student_id='$stid_parameter'";
+        $result = mysqli_query($db_link,$sql);
+        
+        
+        $row = mysqli_fetch_array($result, MYSQLI_ASSOC);
+        //$data['name']=$row['name'];
+        
+        if(mysqli_num_rows($result)==1){
+            
+          echo "HEADER PHP student id"+$row['student_id'];
+          session_start();
+          $_SESSION['message'] = "You have successfully logged in";
+          $_SESSION['logged_user'] = $row['student_id'];//STUDENT ID
+          $_SESSION['user_name'] = $row['name'];//student name
+          $_SESSION['correo'] = $row['email'];//STUDENT EMAIL
+          header ("location: user-mainpage.php");
+
+         }   
+
+
+
+
+        
+
+/*
+         $studentid = mysqli_real_escape_string($db_link, $stid_parameter[1]);
+         $password = mysqli_real_escape_string($db_link, $stid_parameter[2]);
+       
+        
+        //$password = md5($password);
+
+         
+         $sql = "SELECT * FROM user_data WHERE student_id='$studentid' and password='$password'";
+        $result = mysqli_query($db_link,$sql);
+        
+        $data = array();
+        $row = mysqli_fetch_array($result, MYSQLI_ASSOC);
+        //$data['name']=$row['name'];
+        
+          $active = $row['active'];
+        
+        
+          
+        
+        if(mysqli_num_rows($result)==1){
+          session_start();
+            
+            $_SESSION['message'] = "You have successfully logged in";
+            $_SESSION['logged_user'] = $studentid;
+            $_SESSION['user_name'] = $row['name'];
+            $_SESSION['correo'] = $row['email'];
+            
+
+            
+              /*if($studentid=='admin')
+              header("location: data.php");
+              else 
+              header("location: user.php"); //in case we want different interfaces for some users 
+        
+       }*/
+      }     
+    } 
+  ?>
+  
 <head>
   <meta charset="UTF-8">
   <title>NDHU Skill Exchange System</title>
@@ -73,6 +144,7 @@
             return false;
           }else
           {
+            $("#image_id").val(stid);
             $.ajax({
               url:"insertImageDB18Aug.php?stid="+stid,
               method:"POST",
@@ -85,7 +157,7 @@
                 if(data=="valid")
                 {
                   alert("Succeed");
-                  window.location.href = "login-page.php";
+                  window.location.href = "user-mainpage.php";
                 }else
                 {
                     alert("not succeed");
