@@ -84,10 +84,14 @@
    
 		$id = $_SESSION['logged_user']; // gets the student id of the user
 		
-		$userskill = mysqli_query($db_link,"select `id_skill` from `user_skills` where `student_id` = '$id' and `skill_status` = 'interested' "); // gets the id of the skill of the logged user
+		//$userskill = mysqli_query($db_link,"select `id_skill` from `user_skills` where `student_id` = '$id' and `skill_status` = 'interested' "); // gets the id of the skill of the logged user
+		$userskill = "select `id_skill` from `user_skills` where `student_id` = '$id' and `skill_status` = 'interested' "; // gets the id of the skill of the logged user
 		for ($i=0; $i <3 ; $i++) { 
-$fila = mysqli_fetch_array($userskill, MYSQLI_ASSOC);
+		//$fila = mysqli_fetch_array($userskill, MYSQLI_ASSOC);
+			$fila = mysqli_query($db_link,$userskill);
 //echo "your skill id is : ";
+		if($fila)
+		{
 			$idskill = $fila['id_skill'];
 			//echo $idskill; echo "<br />\n";
 			
@@ -108,7 +112,7 @@ $fila = mysqli_fetch_array($userskill, MYSQLI_ASSOC);
 			echo "&nbsp &nbsp &nbsp &nbsp\t"; echo "&nbsp &nbsp &nbsp &nbsp\t"; 
 			//echo "<br />\n";
 			//echo "<br />\n";
-
+			}
 			# code...
 		}
 		

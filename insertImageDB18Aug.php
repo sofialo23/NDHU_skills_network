@@ -34,7 +34,7 @@
                 //echo $result_insertPic?'ok':'err';
             }else
             {
-                echo "not moved";
+                echo "not moved";//ERROR IN HERE 2018/10/18
             }
         }else
         {
