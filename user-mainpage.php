@@ -14,45 +14,45 @@
 </head>
 
 <body>
-	
+
 	<!----start-banner--------- -->
-	
-	<div class="info"> 
-      <h1 align = " right" >Welcome, 
-	  <?php 
+
+	<div class="info">
+      <h1 align = " right" >Welcome,
+	  <?php
 	  	include('connectionDB.php');
 		session_start();
-   
+
 		$id = $_SESSION['logged_user']; // the student id of the user
 		$loggeduser = $_SESSION['user_name'];
 
 		$sql = "SELECT * FROM user_data WHERE student_id='$id'";
         $result = mysqli_query($db_link,$sql);
-        
-        
+
+
         $row = mysqli_fetch_array($result, MYSQLI_ASSOC);
         //$data['name']=$row['name'];
-        
+
         if(mysqli_num_rows($result)==1){
-            
+
             $imagen = $row['photo'];
             $_SESSION['image'] = $imagen;
             //echo '<img src="'.$imagen.'" height="42" width="42" />';
-         }   
+         }
 
 
 
 
 		//$image = $_SESSION['image'];
 		/*
-	
+
 	   $ses_sql = mysqli_query($db_link,"select `name` from `user_data` where `student_id` = '$id' ");
 	   $row = mysqli_fetch_array($ses_sql,MYSQLI_ASSOC);
-	   $login_session = $row['name'];  
+	   $login_session = $row['name'];
 */
-	  
+
 	  echo $loggeduser;
-	   ?> </h1>	
+	   ?> </h1>
 	   <a  href="logout.php" style="float: right;">Log Out</a> <br>
 	   <img src="<?php  echo $_SESSION['image'];?>"  height="90" width="100" /> <!-- THIS IS THE PICTURE OF THE USER IN THE DB -->
 
@@ -60,78 +60,81 @@
 
 		<h1 style="text-align:center;">Skills Exchange Network</h1> <br>
 	<div id="sidebar" class="nav-collpase">
-	 
-	  <a href="profile.php">My profile</a> <br>	
+
+	  <a href="profile.php">My profile</a> <br>
 	  <a href="#">My messages</a> <br>
 	  <a href="#">My friends</a> <br>
 	  <a href="#">Link 4</a> <br>
 	</div>
 
-	
-	
+
+
 	<!----start--introduction---------->
-		
-	
+
+
 	<h3 style="text-align:center;"> Partners you might be interested in </h3>
 
 	<br><br>
-	
-	<p>		
-	<?php   				//SHOWS RECOMMENDATIONS OF USERS WHO TEACH THE SKILL YOU ARE INTERESTED IN 
-	
+
+	<p>
+	<?php   				//SHOWS RECOMMENDATIONS OF USERS WHO TEACH THE SKILL YOU ARE INTERESTED IN
+
 	  include('connectionDB.php');
-		
-   
+
+
 		$id = $_SESSION['logged_user']; // gets the student id of the user
-		
-		//$userskill = mysqli_query($db_link,"select `id_skill` from `user_skills` where `student_id` = '$id' and `skill_status` = 'interested' "); // gets the id of the skill of the logged user
-		$userskill = "select `id_skill` from `user_skills` where `student_id` = '$id' and `skill_status` = 'interested' "; // gets the id of the skill of the logged user
-		for ($i=0; $i <3 ; $i++) { 
-		//$fila = mysqli_fetch_array($userskill, MYSQLI_ASSOC);
-			$fila = mysqli_query($db_link,$userskill);
+
+		$userskill = mysqli_query($db_link,"select `id_skill` from `user_skills` where `student_id` = '$id' and `skill_status` = 'interested' "); // gets the id of the skill of the logged user
+		for ($i=1; $i <=3 ; $i++) {
+			$friend = "friend".$i;
+
+
+		$fila = mysqli_fetch_array($userskill, MYSQLI_ASSOC);
 //echo "your skill id is : ";
 		if($fila)
 		{
 			$idskill = $fila['id_skill'];
 			//echo $idskill; echo "<br />\n";
-			
 			// gets the id of the user who offers that skill
 			//echo "the id of the user who offers that skill is : ";
 			$requestid = mysqli_query($db_link, "select `student_id` from `user_skills` where `id_skill` = '$idskill' and `skill_status` = 'offers' ");
 			$value2 = mysqli_fetch_array($requestid, MYSQLI_ASSOC);
 			$idwhooffers= $value2['student_id'];
 			//echo $idwhooffers; echo "<br />\n";
-			
-			
 			//gets the name of the user who offers that skill
 			echo "Username : ";
 			$requestname = mysqli_query($db_link, "select distinct `name` from `user_data` where `student_id` = '$idwhooffers' ");
 			$value3 = mysqli_fetch_array($requestname, MYSQLI_ASSOC);
 			$namewhooffers= $value3['name'];
-			echo $namewhooffers; 
-			echo "&nbsp &nbsp &nbsp &nbsp\t"; echo "&nbsp &nbsp &nbsp &nbsp\t"; 
+			$_SESSION['friend']= $namewhooffers;
+
+			?>
+	   <a href="friendProfile.php"><?php
+			echo $namewhooffers;
+
+			?>
+		</a>
+		<?php
 			//echo "<br />\n";
-			//echo "<br />\n";
-			}
-			# code...
 		}
-		
-	
-		
-	   ?>
+			  ?>
+
+
+		<br>
+
 	</p>
-	
+
 	<br> <br>
 
 	<h3 style="text-align:center;"> Search for partners who can teach you a new skill: </h3>
-	
+
 	 <!--------------------------------------- SKILL CATEGORY SECTION ---------------------------   -->
         <p><label> Please Choose the category of your skill </label></p>
         <p>
-            <?php 
+            <?php
               include("connectionDB.php");
               $counter = 1;
-         
+
                 $seldb = @mysqli_select_db($db_link, "skillsdb");
                 if(!$seldb) die("資料庫選擇失敗！Error cagado");
                 $sql_getCategory = "SELECT * FROM `category_skill` ;";
@@ -151,11 +154,11 @@
                 echo "<p>";
                 echo "<option>-- Select a sub category --</option>";
                 echo "</select></p>";
-             	
+
                 echo "<p>  </p>";
 
             ?>
-			
+
 
 <input type="submit" id="submitb"/>
 
@@ -166,7 +169,7 @@
 <h3 style="text-align:center;"> Results from the search </h3>
 
 
-<!------end--introduction--------- 
+<!------end--introduction---------
 
 <table id="userstable">
 	<tr>
@@ -181,42 +184,42 @@
 </table>
 
 	<br><br>
-	
-	
+
+
 -->
 
-		
 
 
-	
 
-	
-	
-	<p id="thisp">		
-	<?php   				//SHOWS RECOMMENDATIONS OF USERS WHO TEACH THE SKILL YOU ARE INTERESTED IN 
-	
+
+
+
+
+	<p id="thisp">
+	<?php   				//SHOWS RECOMMENDATIONS OF USERS WHO TEACH THE SKILL YOU ARE INTERESTED IN
+
 /*
 
 	  include('connectionDB.php');
-		
-   
+
+
 		$id = $_SESSION['logged_user']; // gets the student id of the user
-		
+
 		$userskill = mysqli_query($db_link,"select `id_skill` from `user_skills` where `student_id` = '$id' and `skill_status` = 'interested' "); // gets the id of the skill of the logged user
-		
+
 		while ($fila = mysqli_fetch_array($userskill, MYSQLI_ASSOC)) {
 			echo "your skill id is : ";
 			$idskill = $fila['id_skill'];
 			echo $idskill; echo "<br />\n";
-			
+
 			// gets the id of the user who offers that skill
 			echo "the id of the user who offers that skill is : ";
 			$requestid = mysqli_query($db_link, "select `student_id` from `user_skills` where `id_skill` = '$idskill' and `skill_status` = 'offers' ");
 			$value2 = mysqli_fetch_array($requestid, MYSQLI_ASSOC);
 			$idwhooffers= $value2['student_id'];
 			echo $idwhooffers; echo "<br />\n";
-			
-			
+
+
 			//gets the name of the user who offers that skill
 			echo "the name of the user who offers that skill is : ";
 			$requestname = mysqli_query($db_link, "select `name` from `user_data` where `student_id` = '$idwhooffers' ");
@@ -224,17 +227,17 @@
 			$namewhooffers= $value3['name'];
 			echo $namewhooffers; echo "<br />\n";
 			echo "<br />\n";
-   
+
 		}
 		*/
 	   ?>
 	</p>
-	
+
 
 
 	<!----start---foot------- -->
-		<br> <br>	
-	<br> <br>	
+		<br> <br>
+	<br> <br>
 
 
 	<!------end--foot--------- -->
@@ -266,7 +269,7 @@
                 $.each(data,function(index,element){
                     $($secondSelect).append("<option value='"+element.idskill+"'  id='"+element.idskill+"' >" + element.nameskill + "</option>");
                 });
-              }  
+              }
             });
         }
         $('#slct_category1').change(function(){
@@ -299,22 +302,21 @@ $(document).ready(function() {
                 });
 
 			res += "</p>";
-			$("#thisp").html(res);	             
+			$("#thisp").html(res);
 	        }
 
 
     	});
 
-  
-    }); 
+
+    });
 });
 </script>
 
 
 
-	
+
 
 <!----start------------>
 
 <!------end------------->
-
