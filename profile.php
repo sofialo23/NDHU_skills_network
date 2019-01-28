@@ -1,4 +1,11 @@
 <?php 
+
+
+
+
+/*Needs to be added in the page that the changes will be shown in the next log in*/
+
+
 	  include('connectionDB.php');
 		session_start();
 		
