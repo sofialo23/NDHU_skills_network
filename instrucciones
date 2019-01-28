@@ -18,3 +18,4 @@ in order to start the session from there.
 So the page user-mainpage.php can have the 
 same parameters in order to continue with the same session
 as when the user login.
+
