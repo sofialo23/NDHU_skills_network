@@ -37,7 +37,7 @@
 					  $_SESSION['correo'] = $row['email'];
 					  $_SESSION['image'] = $row['photo'];
 					  
-						header ("location: user-mainpage.php");
+						header ("location: user-mainpage_restored.php");
 							/*if($studentid=='admin')
 							header("location: data.php");
 							else 
