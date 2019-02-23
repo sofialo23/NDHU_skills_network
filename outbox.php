@@ -1,14 +1,11 @@
 
-
-
-
-
 <?php  
 	session_start();
 	require("connectionDB.php");
-	$user = $_SESSION['user_name'];
-
-	if (isset($_POST['delete'])) {
+	
+if (isset($_SESSION['user_name']) && $_SESSION['user_name'] == true) { 					//CHECKS WHETHER USER IS  LOGGED IN
+   $user = $_SESSION['user_name'];
+	if (isset($_POST['delete'])) { 				//DELETES MESSAGE WHEN BUTTON IS CLICKED
 	    $id = $_POST['id'];  
 
 	    $query = "UPDATE messages SET sent_deleted = 'yes' WHERE from_user = '$user' AND msg_id = '$id'";
@@ -18,16 +15,26 @@
 	    echo "Message succesfully deleted from your outbox.";
 	}
 
-	$alloutmsg = "SELECT * FROM messages WHERE from_user = '$user' AND sent_deleted = 'no'";
+
+	if (isset($_POST['seeconv'])) { 				//SHOWS FULL CONVERSATION WITH THAT OTHER USER
+		$_SESSION['touser'] = $_POST['toconv'];
+		header("Location: conversation.php");
+exit;
+	    $query = "SELECT * FROM messages WHERE from_user = '$user' AND sent_deleted = 'no' AND to_user = '$touser' ";
+	   
+
+	    mysqli_query($db_link, $query )or die(mysql_error());
+	    echo "This are all the messages from WHOO";
+	}
+
+
+	$alloutmsg = "SELECT * FROM messages WHERE from_user = '$user' AND sent_deleted = 'no' GROUP BY to_user ORDER BY time_sent DESC";
 	
 	$sql = mysqli_query($db_link, $alloutmsg)or die(mysql_error());
 
 	while($row = mysqli_fetch_array( $sql ))
 	{
-	/* I have set each element into it's OWN echo statement for easy readind.
-	 however it is possible to create it in one echo statement like the following:
-	 echo "Message ID#: ".$row['id'];
-	*/ 
+	 
 		echo "<div>";
 		echo "To: ";
 		echo $row['to_user'];
@@ -42,17 +49,22 @@
 		echo $row['message'];   ?>
 		   	<form action="<?php echo $_SERVER['PHP_SELF']?>" method="post">
 			  	<input type="hidden" name="id" maxlength="5" value = "<?php echo $row['msg_id']; ?>">
+			  	<input type="hidden" name="toconv" maxlength="5" value="<?php echo $row['to_user']; ?>">
 				<input type="submit" name="delete" value="Delete PM">
+				<input type="submit" name="seeconv" value="See conversation" >
 			</form>
 	<?php
 		}
 		echo "</div>";
-	?>
+} 
 
-
-
-
-
+else {       							//REDIRECTS TO LOGIN PAGE IF USER IS NOT LOGGED IN
+    echo "Please log in first to see this page.";
+    echo "</br>";
+ 	?><a href="login-page.php">Go to Login Page</a> <?php
+}
+?>
+	
 
 
 <!-- using table instead of div 

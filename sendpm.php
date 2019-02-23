@@ -2,6 +2,8 @@
 	session_start();
 	require("connectionDB.php");
 
+if (isset($_SESSION['user_name']) && $_SESSION['user_name'] == true) {    		//CHECKS WHETHER USER IS  LOGGED IN
+    
 	 if (isset($_POST['sendmg']))
 	{
 	// if the form has been submitted, this inserts it into the Database 
@@ -58,3 +60,17 @@
 		</form>
 	</body>
 </html>
+
+  <?php  
+} 
+
+
+else {       							//REDIRECTS TO LOGIN PAGE IF USER IS NOT LOGGED IN
+    echo "Please log in first to see this page.";
+    echo "</br>";
+		?><a href="login-page.php">Go to Login Page</a> <?php
+}
+?>
+	
+
+
