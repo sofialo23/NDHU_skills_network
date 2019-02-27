@@ -3,15 +3,15 @@
 	session_start();
 	require("connectionDB.php");
 	
-if (isset($_SESSION['user_name']) && $_SESSION['user_name'] == true) { 					//CHECKS WHETHER USER IS  LOGGED IN
+if (isset($_SESSION['user_name']) && $_SESSION['user_name'] == true) { 			//CHECKS WHETHER USER IS  LOGGED IN
+   ?><a href="sendpm.php">Compose a new message</a></br></br> <?php
    $user = $_SESSION['user_name'];
 	if (isset($_POST['delete'])) { 				//DELETES MESSAGE WHEN BUTTON IS CLICKED
 	    $id = $_POST['id'];  
 
 	    $query = "UPDATE messages SET sent_deleted = 'yes' WHERE from_user = '$user' AND msg_id = '$id'";
 	   
-
-	    mysqli_query($db_link, $query )or die(mysql_error());
+	    mysqli_query($db_link, $query )or die(mysql_error($db_link));
 	    echo "Message succesfully deleted from your outbox.";
 	}
 
@@ -20,17 +20,19 @@ if (isset($_SESSION['user_name']) && $_SESSION['user_name'] == true) { 					//CH
 		$_SESSION['touser'] = $_POST['toconv'];
 		header("Location: conversation.php");
 exit;
-	    $query = "SELECT * FROM messages WHERE from_user = '$user' AND sent_deleted = 'no' AND to_user = '$touser' ";
-	   
+	    $query = "SELECT * FROM messages WHERE from_user = '$user' OR to_user = '$user' AND sent_deleted = 'no' AND to_user = '$touser' ";
 
-	    mysqli_query($db_link, $query )or die(mysql_error());
+	    mysqli_query($db_link, $query )or die(mysql_error($db_link));
 	    echo "This are all the messages from WHOO";
 	}
 
 
-	$alloutmsg = "SELECT * FROM messages WHERE from_user = '$user' AND sent_deleted = 'no' GROUP BY to_user ORDER BY time_sent DESC";
-	
-	$sql = mysqli_query($db_link, $alloutmsg)or die(mysql_error());
+	/*$alloutmsg = "SELECT * FROM messages WHERE from_user = '$user' OR to_user = '$user' AND sent_deleted = 'no' GROUP BY to_user, from_user ORDER BY time_sent DESC";*/
+
+$alloutmsg = "SELECT DISTINCT to_user, from_user FROM messages WHERE from_user = '$user' OR to_user = '$user' AND sent_deleted = 'no'  ORDER BY time_sent DESC";
+
+	echo $alloutmsg;
+	$sql = mysqli_query($db_link, $alloutmsg)or die(mysqli_error($db_link));
 
 	while($row = mysqli_fetch_array( $sql ))
 	{
@@ -42,11 +44,11 @@ exit;
 		echo "From: ";
 		echo $row['from_user'];
 		echo "<br>";
-		echo "Time sent: ";
+		/*echo "Time sent: ";
 		echo $row['time_sent'];
 		echo "<br>";
 		echo "Message: ";
-		echo $row['message'];   ?>
+		echo $row['message'];  */ ?>
 		   	<form action="<?php echo $_SERVER['PHP_SELF']?>" method="post">
 			  	<input type="hidden" name="id" maxlength="5" value = "<?php echo $row['msg_id']; ?>">
 			  	<input type="hidden" name="toconv" maxlength="5" value="<?php echo $row['to_user']; ?>">

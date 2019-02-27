@@ -43,7 +43,7 @@
 	<div id="sidebar" class="nav-collpase">
 	 
 	  <a href="profile.php">My profile</a> <br>	
-	  <a href="outbox.php">My messages</a> <br>
+	  <a href="messages.php">My messages</a> <br>
 	  <a href="#">My friends</a> <br>
 	  <a href="#">Link 4</a> <br>
 	</div>

@@ -28,11 +28,11 @@ if (isset($_SESSION['user_name']) && $_SESSION['user_name'] == true) { 					//CH
 	}*/
 
 	$touser = $_SESSION['touser'];
-	echo "Messages sent to : $touser";
+	echo "Your conversation with : $touser";
 	echo "<br>";echo "<br>";
 
-	$allmsgs = "SELECT * FROM messages WHERE from_user = '$user' AND sent_deleted = 'no' AND to_user = '$touser' ORDER BY time_sent DESC";
-	
+	$allmsgs = "SELECT * FROM messages WHERE (from_user = '$user' AND to_user = '$touser') OR (from_user = '$touser' AND to_user = '$user') AND sent_deleted = 'no' ORDER BY time_sent DESC"; // MODIFY HERE
+	echo $allmsgs;
 	$sql = mysqli_query($db_link, $allmsgs)or die(mysql_error());
 
 	while($row = mysqli_fetch_array( $sql ))
