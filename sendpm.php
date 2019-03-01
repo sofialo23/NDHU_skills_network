@@ -1,3 +1,8 @@
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+
+<link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css" />
 <?php    
 	session_start();
 	require("connectionDB.php");
@@ -45,7 +50,7 @@ if (isset($_SESSION['user_name']) && $_SESSION['user_name'] == true) {    		//CH
 				<tr><td colspan=2><h3>Send PM:</h3></td></tr>
 				</td></tr>
 				<tr><td>To User: </td><td>
-				<input type="text" name="to_user" maxlength="32" value = "" required="true">
+				<input type="text" name="to_user" id="to_user" maxlength="32" value = "" required="true">
 				</td></tr>
 				<tr><td>Subject: </td><td>
 				<textarea name="subject" cols=50 rows=1 wrap="SOFT"  required="true"></textarea>
@@ -74,3 +79,17 @@ else {       							//REDIRECTS TO LOGIN PAGE IF USER IS NOT LOGGED IN
 	
 
 
+<script>
+	$(function() {
+    $("#to_user").autocomplete({
+        source: "autocomplete.php",
+        select: function( event, ui ) {
+            event.preventDefault();
+            $("#to_user").val(ui.item.id);
+        }
+    });
+});
+
+
+
+</script>

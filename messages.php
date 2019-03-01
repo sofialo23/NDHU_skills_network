@@ -11,7 +11,7 @@ if (isset($_SESSION['user_name']) && $_SESSION['user_name'] == true) { 			//CHEC
 
 	    $query = "UPDATE messages SET sent_deleted = 'yes' WHERE from_user = '$user' AND msg_id = '$id'";
 	   
-	    mysqli_query($db_link, $query )or die(mysql_error($db_link));
+	    mysqli_query($db_link, $query )or die(mysqli_error($db_link));
 	    echo "Message succesfully deleted from your outbox.";
 	}
 
@@ -22,7 +22,7 @@ if (isset($_SESSION['user_name']) && $_SESSION['user_name'] == true) { 			//CHEC
 exit;
 	    $query = "SELECT * FROM messages WHERE from_user = '$user' OR to_user = '$user' AND sent_deleted = 'no' AND to_user = '$touser' ";
 
-	    mysqli_query($db_link, $query )or die(mysql_error($db_link));
+	    mysqli_query($db_link, $query )or die(mysqli_error($db_link));
 	    echo "This are all the messages from WHOO";
 	}
 
