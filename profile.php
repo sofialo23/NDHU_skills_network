@@ -257,8 +257,7 @@ if(name && email && phoneNumber && aboutMe && status) {
 			        data: {insert : insert},
 			        success: function(data) {
 		                if(data == "success"){
-            			alert("Data has been updated");
-		             
+							alert("Data has been updated");
 			        }
 			        else
 			        	alert("Error updating data, please try again later")
